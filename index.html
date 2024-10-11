@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Style for product advantage text */
+        .text {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            
+        
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);;
+        }
+
+        .text h2 {
+            text-align: center;
+            color: #1ebe58;
+            height: auto;
+        }
+
+        .text ul {
+            list-style-type: disc; /* Ensure bullet points are shown */
+            list-style-position: inside; /* Bullet inside content */
+            padding-left: 20px; /* Ensure padding for bullets */
+            margin-left: 0; /* Prevent margin overriding */
+            text-align: left;
+        }
+
+        .text li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Responsive styling for mobile devices */
+        @media (max-width: 768px) {
+            .text li {
+                font-size: 14px;
+            }
+        }
+            /* Style for responsive WhatsApp button */
+            .whatsapp-container {
+                text-align: center;
+                margin-top: 20px;
+            }
+    
+            .whatsapp-container img {
+                width: 100px;
+                height: auto;
+                transition: transform 0.2s ease;
+            }
+    
+            .whatsapp-container img:hover {
+                transform: scale(1.1); /* Hover effect to enlarge image */
+            }
+    
+            .whatsapp-container a {
+                display: inline-block;
+                margin-top: 10px;
+                text-decoration: none;
+            }
+    
+            button {
+                background-color: #25D366;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+    
+            button:hover {
+                background-color: #1ebe58;
+            }
+    
+            /* Responsive styling */
+            @media (max-width: 768px) {
+                .whatsapp-container img {
+                    width: 80px; /* Smaller size for mobile */
+                }
+    
+                button {
+                    font-size: 14px;
+                    padding: 8px 16px;
+                }
+            }
+        </style>
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Kursi Mini</title>
+    </head>
+    <body>
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+        </a>
+        
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo">Kursi Mini Portabel</a>
+
+
+                
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__img">
+                        <img src="assets/img/home.png" alt="">
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Kursi Lipat Mini Serbaguna</h1>
+                        <p class="home__description">Nikmati kenyamanan di mana saja dengan Kursi Lipat Portabel yang super ringan ini! Dengan berat hanya 500 gram, kursi ini adalah solusi ideal untuk Anda yang suka mendaki gunung, memancing, piknik, atau sekadar bersantai di luar ruangan.</p>
+                        
+                    </div>   
+                </div>
+            </section>
+
+            <!--========== SHARE ==========-->
+            <section class="share section bd-container" id="share">
+                <div class="share__container bd-grid">
+                    <div class="share__img" style="position: relative; display: inline-block;">
+                        <video id="videoPlayer" muted loop class="share__video" style="width: 100%; height: auto;">
+                            <source src="assets/img/kursicapcut.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="play-icon" onclick="togglePlay(event)" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer; display: block;">
+                            <img src="assets/img/play-icon.png" alt="Play" style="width: 100px; height: 100%;">
+                        </div>
+                    </div>
+                    
+                    <script>
+                        function togglePlay(event) {
+                            event.stopPropagation(); // Prevent the video click from firing
+                            var video = document.getElementById("videoPlayer");
+            
+                            // Unmute the video and play it when the play button is clicked
+                            video.muted = false;
+                            
+                            if (video.paused) {
+                                video.play();
+                                document.querySelector('.play-icon').style.display = 'none'; // Hide the icon when playing
+                            } else {
+                                video.pause();
+                                document.querySelector('.play-icon').style.display = 'block'; // Show icon when paused
+                            }
+                        }
+                    </script>
+                    
+                    <style>
+                        .play-icon {
+                            display: block; /* Ensure the play icon is displayed by default */
+                            /* Add additional styles here if needed */
+                        }
+                    </style>
+            
+                    <br>
+                    <div class="text">
+                        <h2>Keunggulan Produk</h2>
+                        <ul>
+                            <li>Berat hanya 500g, kursi ini mudah dilipat dan dimasukkan ke dalam tas kecil. Cocok digunakan kapanpun dan dimanapun.</li>
+                            <li>Terbuat dari bahan baja karbon berkualitas yang mampu menopang berat tubuh Anda dengan nyaman dan aman.</li>
+                            <li>Ukuran yang pas untuk memberikan kenyamanan duduk maksimal di berbagai situasi, dari memancing hingga piknik keluarga.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!--========== DECORATION ==========-->
+            <section class="decoration section bd-container" id="decoration">
+                <h2 class="text" style="color: #1ebe58;">Testimoni Produk</h2>
+                <div class="decoration__container bd-grid">
+                    <div class="decoration__data">
+                        <img src="assets/img/custbarra.jpg" alt="" class="decoration__img">
+                    </div>
+
+                    <div class="decoration__data">
+                        <img src="assets/img/Custlukman.jpg" alt="" class="decoration__img">
+
+                    </div>
+            </section>
+
+            <!--========== ACCESSORIES ==========-->
+            <section class="accessory section bd-container" id="accessory">
+                <h2 class="section-title">Promo Spesial !!</h2> 
+                <p class="free-title">Hari ini gratis ongkir, buruan dipesan !</p><br>
+
+                <div class="accessory__container bd-grid">
+                    <div class="accessory__content">
+                        <img src="assets/img/portabel.png" alt="" class="accessory__img">
+                        <h3 class="accessory__title"></h3><br>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="free-title">Gratis Ongkir Hari Ini !!!</h4>
+                </div>
+                <div class="free-title">
+                    <p>Dari <span>
+                        <del style="color: red;"> Rp.150.000 </del>
+                    </span></p>
+                </div>
+                <div>
+                    <h2 class="free-title">Hari Ini Rp. 89.000</h2>
+                    <p class="free-title">
+                        <em>Harga sudah termasuk gratis ongkir</em>
+                        
+                    </p>
+                </div><br>
+
+                <div class="whatsapp-container">
+                    <a href="https://wa.me/6287722679930?text=Hallo, Saya ingin memesan" target="_blank">
+                        <button type="button">Hubungi dan beli sekarang</button>
+                    </a>
+                    <br>
+                    <a href="https://wa.me/6287722679930?text=Hallo, Saya ingin memesan" target="_blank">
+                        <img src="assets/img/waa.jfif" alt="WhatsApp">
+                    </a>
+                </div><br>
+
+                <div>
+                    <h4 class="free-title" > Dijamin amanah dan terpercaya!
+                    </h4>
+                </div>
+                
+            </section>
+            
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section">
+            <div class="footer__container bd-container bd-grid">
+
+            <p class="footer__copy">&#169; 2024 Zulaikha. All right reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
